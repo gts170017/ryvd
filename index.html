@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Downloader</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Login Screen -->
+    <div id="login-screen">
+      <h2>Login</h2>
+      <form id="login-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <button type="submit">Login</button>
+      </form>
+      <p id="login-error"></p>
+    </div>
+
+    <!-- Main App Screen -->
+    <div id="main-screen" style="display: none;">
+      <h1>Video Downloader</h1>
+      <div>
+        <label for="video-link">Put in your Video link:</label>
+        <input type="text" id="video-link" placeholder="Enter video URL">
+      </div>
+      <div>
+        <label for="download-location">Download Location:</label>
+        <input type="text" id="download-location" placeholder="Enter download location">
+      </div>
+      <button id="download-btn">Attempt to download</button>
+      <div id="progress-bar"></div>
+      <p id="status-label"></p>
+
+      <!-- Video Thumbnail Grid -->
+      <div id="thumbnail-grid"></div>
+    </div>
+  </div>
+
+  <script src="java.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+</body>
+</html>
